@@ -12,10 +12,10 @@ import java.util.Scanner;
 
 public class Stock {
 
+    int choix = 0;
     Scanner sc = new Scanner(System.in);
 
     public void Menu() {
-        int choix = 0;
 
         System.out.println("**************************");
         System.out.println("*    GESTION DE STOCK    *");
@@ -25,6 +25,8 @@ public class Stock {
         System.out.println("Que souhaitez vous faire ?");
 
         do {
+            System.out.println("");
+            System.out.println("***** SOUHAITEZ VOUS FAIRE AUTRE CHOSE ? *****");
             System.out.println("");
             System.out.println("1. Tableau de bord");
             System.out.println("2. Gestion de produit");
@@ -77,7 +79,7 @@ public class Stock {
                     break;
 
                 case 0:
-                    System.out.println("Merci d'avoir utilisé l'application");;
+                    System.out.println("Merci d'avoir utilisé l'application");
                     break;
             
                 default:
@@ -92,11 +94,51 @@ public class Stock {
     }
 
     public void tableauDeBord() {
-        System.out.println("un tableau");
+        System.out.println("");
+        System.out.println("QUE SOUHAITEZ-VOUS FAIRE EN SUITE ?");
+        System.out.println("");
+        System.out.println("1. Voir état du stock");
+        System.out.println("2. Produit en rupture");
+        System.out.println("3. Produit stock faible");
+        System.out.println("4. Retour");
+        System.out.println("0. Quitter");
+        choix = sc.nextInt();
+        sc.nextLine();
+
+        do {
+            switch (choix) {
+                case 1:
+                    etatDeStock();
+                    break;
+
+                case 2:
+                    produitsEnRupture();
+                    break;
+
+                case 3:
+                    produitStockFaible();
+                    break;
+
+                case 4:
+                    Menu();
+                    break;
+
+                case 0:
+                    System.out.println("dire bonjour");
+                    break;
+            
+                default:
+                    System.out.println("Merci d'avoir utilisé l'application");
+                    break;
+            }
+            
+        } while (choix != 0);
+        sc.close();
 
     }
 
     public void gestionDeProduit() {
+        System.out.println("bonjour");
 
     }
 
@@ -125,6 +167,19 @@ public class Stock {
     }
 
      public void utilisateur() {
+
+    }
+
+    public void etatDeStock() {
+        System.out.println("mon stock");
+
+    }
+
+    public void produitsEnRupture() {
+
+    }
+
+    public void produitStockFaible() {
 
     }
     
