@@ -138,7 +138,56 @@ public class Stock {
     }
 
     public void gestionDeProduit() {
-        System.out.println("bonjour");
+        System.out.println("");
+        System.out.println("QUE SOUHAITEZ-VOUS FAIRE EN SUITE ?");
+        System.out.println("");
+        System.out.println("1. Ajouter un produit");
+        System.out.println("2. Modifier un produit");
+        System.out.println("3. Supprimer un produit");
+        System.out.println("4. Rechercher un produit");
+        System.out.println("5. Afficher tous les produits");
+        System.out.println("6. Retour");
+        System.out.println("0. Quitter");
+        choix = sc.nextInt();
+        sc.nextLine();
+
+             do {
+            switch (choix) {
+                case 1:
+                    ajouterUnProduit();
+                    break;
+
+                case 2:
+                    modifierUnProduit();
+                    break;
+
+                case 3:
+                    supprimerUnProduit();
+                    break;
+
+                case 4:
+                    rechercherUnProduit();
+                    break;
+
+                case 5:
+                    afficherTousLesProduits();
+                    break;
+
+                case 6:
+                    Menu();
+                    break;
+
+                case 0:
+                    System.out.println("dire bonjour");
+                    break;
+            
+                default:
+                    System.out.println("Merci d'avoir utilisé l'application");
+                    break;
+            }
+            
+        } while (choix != 0);
+        sc.close();
 
     }
 
@@ -180,6 +229,27 @@ public class Stock {
     }
 
     public void produitStockFaible() {
+
+    }
+
+    public void ajouterUnProduit() {
+        System.out.println("produit ajouté");
+
+    }
+
+    public void modifierUnProduit() {
+
+    }
+
+    public void supprimerUnProduit() {
+
+    }
+
+    public void rechercherUnProduit() {
+
+    }
+
+    public void afficherTousLesProduits() {
 
     }
     
