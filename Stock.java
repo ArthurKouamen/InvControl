@@ -124,11 +124,11 @@ public class Stock {
                     break;
 
                 case 0:
-                    System.out.println("dire bonjour");
+                    System.out.println("Merci d'avoir utilisé l'application");
                     break;
             
                 default:
-                    System.out.println("Merci d'avoir utilisé l'application");
+                    System.out.println("Mauvais choix. Veuillez saisir un nombre parmis ceux qui sont proposés");
                     break;
             }
             
@@ -178,11 +178,11 @@ public class Stock {
                     break;
 
                 case 0:
-                    System.out.println("dire bonjour");
+                    System.out.println("Merci d'avoir utilisé l'application");
                     break;
             
                 default:
-                    System.out.println("Merci d'avoir utilisé l'application");
+                    System.out.println("Mauvais choix. Veuillez saisir un nombre parmis ceux qui sont proposés");
                     break;
             }
             
@@ -192,6 +192,41 @@ public class Stock {
     }
 
     public void approvisionement() {
+         System.out.println("");
+        System.out.println("QUE SOUHAITEZ-VOUS FAIRE EN SUITE ?");
+        System.out.println("");
+        System.out.println("1. Ajouter une entrée de stock");
+        System.out.println("2. Historique des entrée");
+        System.out.println("3. Retour");
+        System.out.println("0. Quitter");
+        choix = sc.nextInt();
+        sc.nextLine();
+
+        do {
+            switch (choix) {
+                case 1:
+                    ajouterUneEntréeDeStock();
+                    break;
+
+                case 2:
+                    historiqueDesEntrées();
+                    break;
+
+                case 3:
+                    Menu();
+                    break;
+
+                case 0:
+                    System.out.println("Merci d'avoir utilisé l'application");
+                    break;
+            
+                default:
+                    System.out.println("Mauvais choix. Veuillez saisir un nombre parmis ceux qui sont proposés");
+                    break;
+            }
+            
+        } while (choix != 0);
+        sc.close();
 
     }
 
@@ -250,6 +285,15 @@ public class Stock {
     }
 
     public void afficherTousLesProduits() {
+
+    }
+
+     public void ajouterUneEntréeDeStock() {
+        System.out.println("une entrée de stock a été ajouté");
+
+    }
+
+     public void historiqueDesEntrées() {
 
     }
     
